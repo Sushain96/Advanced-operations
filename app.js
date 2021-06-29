@@ -14,3 +14,14 @@ storeBtn.addEventListener('click', () => {
     } else
     console.log("oops!!");
  })
+ storeBtn.addEventListener('click', () => {
+    sessionStorage.setItem("UID",userId);
+});
+ retrieveBtn.addEventListener('click',() =>{
+     
+    const retrievedData = sessionStorage.getItem("UID");
+    if(retrievedData){
+        console.log( 'The adsked data is ' + retrievedData);    
+    } else
+    console.log("oops!!");
+ })
